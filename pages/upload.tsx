@@ -11,6 +11,8 @@ import {client} from '../utils/client'
 import {topics} from '../utils/constants'
 import { BASE_URL } from '../utils'
 
+
+
 const Upload = () => {
 
     const [isLoading, setIsLoading] = useState(false)
@@ -24,7 +26,7 @@ const Upload = () => {
     const router = useRouter()
 
     const uploadVideo = async (e: any) => {
-        const selectedFile = e.target.files[0];
+        const selectedFile = e.target.files[0]
         const fileTypes = ['video/mp4', 'video/webm', 'video/ogg'];
         
 
@@ -70,14 +72,14 @@ const Upload = () => {
     }
 
   return (
-    <div className='flex w-full h-full absolute left-0 top-[60px] mb-10 pt-10 lg:pt-20 bg-[#F8F8F8] justify-center'>
+    <div className='flex w-full h-full absolute left-0 top-[70px] mb-10 pt-10 lg:pt-20 bg-[#F8F8F8] justify-center'>
         <div className='bg-white rounded-lg xl:h-[80vh] xd:w-[100%] md:w-[80%] flex gap-6 flex-wrap justify-between items-center p-14 pt-6'>
             <div>
                 <div>
                     <p className='text-2xl font-bold' >Upload Video</p>
                     <p className='text-md text-gray-400'>Post a video to your account</p>
                 </div>
-                <div className='border-dashed rounded-xl border-4 border-gray-200 flex flex-col justify-center items-center outline-none mt-10 w-[260px] h-[460px] p-10 cursor-pointer hover:border-red-300 hover:bg-gray-100' >
+                <div className='border-dashed rounded-xl border-4 border-gray-200 flex flex-col justify-center items-center outline-none mt-10 w-[260px] h-[460px] p-3 cursor-pointer hover:border-red-300 hover:bg-gray-100' >
                     {
                         isLoading ? (
                             <p>Uploading...</p>
@@ -90,7 +92,7 @@ const Upload = () => {
                                                 src={videoAsset.url}
                                                 loop
                                                 controls
-                                                className='rounded-xl h-[450px] mt-16 bg-black'
+                                                className='rounded-xl h-[450px] bg-black'
                                             >
 
                                             </video>
@@ -117,7 +119,7 @@ const Upload = () => {
                                             <input 
                                                 type="file"
                                                 name="upload-video"
-                                                className='w-0 h-0'
+                                                className='w-0 h-00'
                                                 onChange={uploadVideo}
                                             />
                                         </label>

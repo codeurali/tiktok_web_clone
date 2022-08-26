@@ -12,6 +12,7 @@ import {Video} from '../../types'
 import useAuthStore from  '../../store/authStore'
 import Comments from '../../components/Comments'
 import LikeButton from '../../components/LikeButton'
+import {IUser} from '../../types'
 
 interface IProps {
     postDetails: Video
@@ -27,9 +28,7 @@ const Detail = ({postDetails}: IProps) => {
 
     const videoRef = useRef<HTMLVideoElement>(null)
     const router = useRouter()
-    const {userProfile }: any = useAuthStore()
-
-    
+    const { userProfile }: any = useAuthStore()
 
 
     const onVideoClick = () => {
